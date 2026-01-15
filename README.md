@@ -8,11 +8,11 @@ A cloud-native microservice that automatically resizes images using **Azure Func
 
 ---
 
-## 🏗 Architecture & Workflow
+## Architecture & Workflow
 
 The system uses a **Trigger-Based** architecture to ensure efficiency and zero idle costs.
 
-**User** ➔ 📂 **Uploads Container** *(Trigger)* ➔ ⚡ **Azure Function** *(Compute)* ➔ 📂 **Output Container** *(Result)*
+**User** ➔ **Uploads Container** *(Trigger)* ➔ **Azure Function** *(Compute)* ➔ **Output Container** *(Result)*
 
 1.  **Ingestion:** A user uploads an image (JPG/PNG) to the `uploads` blob container.
 2.  **Trigger:** The Azure Function detects the new file immediately via an Event Grid trigger.
@@ -22,7 +22,7 @@ The system uses a **Trigger-Based** architecture to ensure efficiency and zero i
 
 ---
 
-## 🛠 Tech Stack
+## Tech Stack
 
 * **Cloud Provider:** Microsoft Azure (West US 2)
 * **Compute:** Azure Functions (Consumption Plan - Serverless)
@@ -33,16 +33,16 @@ The system uses a **Trigger-Based** architecture to ensure efficiency and zero i
 
 ---
 
-## 🚀 Key Features
+## Key Features
 
-* **⚡ Event-Driven:** No polling or constant running servers. The function only wakes up when a file is uploaded.
-* **📉 Cost Optimized:** Uses the Consumption plan, costing $0.00 when idle.
-* **🔒 Secure:** Uses Managed Identities and local environment variable protection (no hardcoded keys).
-* **🏎 High Performance:** Built on .NET 8 Isolated Worker for better memory management and cold start performance.
+* **Event-Driven:** No polling or constant running servers. The function only wakes up when a file is uploaded.
+* **Cost Optimized:** Uses the Consumption plan, costing $0.00 when idle.
+* **Secure:** Uses Managed Identities and local environment variable protection (no hardcoded keys).
+* **High Performance:** Built on .NET 8 Isolated Worker for better memory management and cold start performance.
 
 ---
 
-## 💻 How to Run Locally
+## How to Run Locally
 
 1.  **Clone the Repo**
     ```bash
